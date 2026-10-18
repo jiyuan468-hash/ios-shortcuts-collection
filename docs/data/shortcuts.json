@@ -17,7 +17,13 @@
           "name": "早上好",
           "nameEn": "Morning Greeting",
           "description": "一键播报今日天气、日出日落时间和日程安排",
-          "steps": ["获取当前天气", "获取今日日出日落", "获取今日日历", "朗读文本", "播放音乐"],
+          "steps": [
+            "获取当前天气",
+            "获取今日日出日落",
+            "获取今日日历",
+            "朗读文本",
+            "播放音乐"
+          ],
           "automation": "每天 7:00 自动触发",
           "difficulty": "简单"
         },
@@ -26,7 +32,13 @@
           "name": "晚安模式",
           "nameEn": "Evening Mode",
           "description": "开启深色模式、播放白噪音、设置明日提醒",
-          "steps": ["设置屏幕亮度30%", "开启夜览模式", "播放白噪音", "开启勿扰模式", "显示晚安通知"],
+          "steps": [
+            "设置屏幕亮度30%",
+            "开启夜览模式",
+            "播放白噪音",
+            "开启勿扰模式",
+            "显示晚安通知"
+          ],
           "automation": "22:30 或连接家中 WiFi 自动触发",
           "difficulty": "简单"
         },
@@ -35,7 +47,12 @@
           "name": "睡眠模式",
           "nameEn": "Sleep Mode",
           "description": "睡前准备与起床提醒的一体化流程",
-          "steps": ["开启勿扰模式", "开启夜览", "设置闹钟", "播放助眠音频"],
+          "steps": [
+            "开启勿扰模式",
+            "开启夜览",
+            "设置闹钟",
+            "播放助眠音频"
+          ],
           "automation": "23:00 或手动触发",
           "difficulty": "简单"
         }
@@ -53,7 +70,13 @@
           "name": "一键签到",
           "nameEn": "Multi-Platform Sign-in",
           "description": "同时完成淘宝、天猫、京东、拼多多、饿了么签到",
-          "steps": ["打开淘宝签到", "打开天猫签到", "打开京东签到", "打开拼多多签到", "打开饿了么领豆"],
+          "steps": [
+            "打开淘宝签到",
+            "打开天猫签到",
+            "打开京东签到",
+            "打开拼多多签到",
+            "打开饿了么领豆"
+          ],
           "automation": "每天 10:00 自动运行",
           "difficulty": "中等"
         },
@@ -62,7 +85,12 @@
           "name": "价格监控",
           "nameEn": "Price Monitor",
           "description": "输入商品链接和目标价，降价自动通知",
-          "steps": ["输入商品URL", "设置目标价格", "定时检查价格", "低于目标价发送通知"],
+          "steps": [
+            "输入商品URL",
+            "设置目标价格",
+            "定时检查价格",
+            "低于目标价发送通知"
+          ],
           "automation": "每2小时检查一次",
           "difficulty": "困难"
         }
@@ -80,7 +108,12 @@
           "name": "查看今日任务",
           "nameEn": "View Today's Tasks",
           "description": "在锁屏直接查看今日待办事项",
-          "steps": ["读取tasks.json", "过滤未完成任务", "组合文本", "显示通知"],
+          "steps": [
+            "读取tasks.json",
+            "过滤未完成任务",
+            "组合文本",
+            "显示通知"
+          ],
           "automation": "可添加到锁屏快捷入口",
           "difficulty": "简单"
         },
@@ -89,7 +122,12 @@
           "name": "添加任务",
           "nameEn": "Add Task",
           "description": "语音或文字快速添加新任务",
-          "steps": ["获取输入文本", "读取tasks.json", "追加新任务", "保存文件"],
+          "steps": [
+            "获取输入文本",
+            "读取tasks.json",
+            "追加新任务",
+            "保存文件"
+          ],
           "automation": "Siri「添加任务：xxx」",
           "difficulty": "简单"
         },
@@ -98,7 +136,13 @@
           "name": "会议纪要",
           "nameEn": "Meeting Notes",
           "description": "录音转文字，AI 提取关键信息生成纪要",
-          "steps": ["开始录音", "录音结束", "转录文字", "AI提取要点", "保存备忘录"],
+          "steps": [
+            "开始录音",
+            "录音结束",
+            "转录文字",
+            "AI提取要点",
+            "保存备忘录"
+          ],
           "automation": "会议结束时手动触发",
           "difficulty": "困难"
         }
@@ -116,7 +160,12 @@
           "name": "锁屏待办清单",
           "nameEn": "Lock Screen Todo",
           "description": "把最重要的事钉在 iPhone 锁屏上，iOS 17+ Live Activity",
-          "steps": ["查看今日任务", "显示在锁屏", "点击勾选完成", "全部完成自动关闭"],
+          "steps": [
+            "查看今日任务",
+            "显示在锁屏",
+            "点击勾选完成",
+            "全部完成自动关闭"
+          ],
           "automation": "需要 iOS 17+ 和 Live Activity",
           "difficulty": "困难",
           "requires_ios17": true
@@ -126,7 +175,12 @@
           "name": "锁屏 Widget 配置",
           "nameEn": "Lock Screen Widget",
           "description": "配置锁屏小组件，快速访问常用功能",
-          "steps": ["长按锁屏", "自定义样式", "添加快捷指令入口", "选择常用指令"],
+          "steps": [
+            "长按锁屏",
+            "自定义样式",
+            "添加快捷指令入口",
+            "选择常用指令"
+          ],
           "automation": "一次配置，长期使用",
           "difficulty": "简单"
         }
@@ -144,7 +198,13 @@
           "name": "喝杯水",
           "nameEn": "Drink Water",
           "description": "记录每次喝水，设置每小时提醒，累计达成目标",
-          "steps": ["读取water.json", "count+1", "记录时间", "保存文件", "显示进度通知"],
+          "steps": [
+            "读取water.json",
+            "count+1",
+            "记录时间",
+            "保存文件",
+            "显示进度通知"
+          ],
           "automation": "每小时提醒一次",
           "difficulty": "简单"
         },
@@ -153,9 +213,43 @@
           "name": "运动打卡",
           "nameEn": "Exercise Check-in",
           "description": "记录运动数据，生成打卡图片分享",
-          "steps": ["记录开始时间", "同步 Health App 数据", "生成打卡图片", "保存到相册"],
+          "steps": [
+            "记录开始时间",
+            "同步 Health App 数据",
+            "生成打卡图片",
+            "保存到相册"
+          ],
           "automation": "运动后手动触发",
           "difficulty": "中等"
+        },
+        {
+          "id": "period-tracker",
+          "name": "月經追蹤",
+          "nameEn": "Period Tracker",
+          "description": "記錄生理週期，預測下次月經時間與排卵日",
+          "steps": [
+            "讀取上次月經日期",
+            "計算週期長度",
+            "預測下次月經日期",
+            "標註排卵日",
+            "推送提醒通知"
+          ],
+          "automation": "每月自動計算並提醒",
+          "difficulty": "簡單"
+        },
+        {
+          "id": "medication-reminder",
+          "name": "用藥提醒",
+          "nameEn": "Medication Reminder",
+          "description": "設定用藥時間與劑量，準時提醒並記錄服用情形",
+          "steps": [
+            "輸入藥品名稱與劑量",
+            "設定服藥時間",
+            "到點發送通知",
+            "記錄服用狀態"
+          ],
+          "automation": "依設定時間每日自動提醒",
+          "difficulty": "簡單"
         }
       ]
     },
@@ -171,7 +265,13 @@
           "name": "拼接截图",
           "nameEn": "Screenshot Stitch",
           "description": "多张截图自动垂直拼接成长图",
-          "steps": ["选取多张截图", "按时间排序", "计算总高度", "垂直拼接", "保存到相册"],
+          "steps": [
+            "选取多张截图",
+            "按时间排序",
+            "计算总高度",
+            "垂直拼接",
+            "保存到相册"
+          ],
           "automation": "手动触发，从相册选择截图",
           "difficulty": "中等"
         }
@@ -189,7 +289,13 @@
           "name": "手机丢了",
           "nameEn": "Lost Mode",
           "description": "一键启动丢失模式，锁定设备并通知家人",
-          "steps": ["播放提示音", "设置锁定留言", "开启查找", "发送位置给家人", "拍摄周围环境"],
+          "steps": [
+            "播放提示音",
+            "设置锁定留言",
+            "开启查找",
+            "发送位置给家人",
+            "拍摄周围环境"
+          ],
           "automation": "Siri「我的手机丢了」",
           "difficulty": "简单",
           "warning": true
@@ -208,10 +314,16 @@
           "name": "打开微信",
           "nameEn": "Open WeChat",
           "description": "快速打开微信指定页面（朋友圈/扫一扫/设置）",
-          "steps": ["打开微信"],
+          "steps": [
+            "打开微信"
+          ],
           "automation": "手动触发",
           "difficulty": "简单",
-          "url_schemes": ["weixin://", "weixin://dl/moments", "weixin://dl/settings"]
+          "url_schemes": [
+            "weixin://",
+            "weixin://dl/moments",
+            "weixin://dl/settings"
+          ]
         }
       ]
     },
@@ -227,7 +339,12 @@
           "name": "查看电量",
           "nameEn": "Battery Check",
           "description": "显示各设备电量（iPhone、Apple Watch、 AirPods）",
-          "steps": ["获取 iPhone 电量", "获取 Apple Watch 电量", "获取 AirPods 电量", "组合文本显示通知"],
+          "steps": [
+            "获取 iPhone 电量",
+            "获取 Apple Watch 电量",
+            "获取 AirPods 电量",
+            "组合文本显示通知"
+          ],
           "automation": "每天早8点或连接充电器时",
           "difficulty": "简单"
         },
@@ -236,7 +353,11 @@
           "name": "Wi-Fi 开关",
           "nameEn": "Wi-Fi Toggle",
           "description": "快速切换 Wi-Fi 和移动数据，或自动判断联网状态",
-          "steps": ["判断当前网络类型", "如使用移动数据则提示", "打开设置 Wi-Fi 页或关闭"],
+          "steps": [
+            "判断当前网络类型",
+            "如使用移动数据则提示",
+            "打开设置 Wi-Fi 页或关闭"
+          ],
           "automation": "手动触发或连接到特定地点时自动切换",
           "difficulty": "简单"
         },
@@ -245,7 +366,11 @@
           "name": "开始录屏",
           "nameEn": "Start Screen Recording",
           "description": "一键开始屏幕录制，带麦克风音频",
-          "steps": ["等待3秒倒计时", "启动屏幕录制", "显示录制按钮悬浮窗"],
+          "steps": [
+            "等待3秒倒计时",
+            "启动屏幕录制",
+            "显示录制按钮悬浮窗"
+          ],
           "automation": "手动触发，可通过锁屏或控制中心添加",
           "difficulty": "简单"
         },
@@ -254,9 +379,42 @@
           "name": "截屏后上传",
           "nameEn": "Screenshot Upload",
           "description": "自动截屏并上传到指定文件夹或笔记应用",
-          "steps": ["截屏", "等待1秒确保保存完成", "移动到指定文件夹", "可选：上传到云盘或粘贴到剪贴板"],
+          "steps": [
+            "截屏",
+            "等待1秒确保保存完成",
+            "移动到指定文件夹",
+            "可选：上传到云盘或粘贴到剪贴板"
+          ],
           "automation": "手动触发，也可设置为截屏后自动运行",
           "difficulty": "中等"
+        },
+        {
+          "id": "ocr-text",
+          "name": "OCR 文字辨識",
+          "nameEn": "OCR Text Reader",
+          "description": "拍攝照片並自動辨識其中的文字，支援中文、英文等多國語言",
+          "steps": [
+            "開啟相機拍照",
+            "使用原生 OCR 辨識圖片中的文字",
+            "顯示辨識結果",
+            "可複製至剪貼簿"
+          ],
+          "automation": "手動觸發",
+          "difficulty": "簡單"
+        },
+        {
+          "id": "wifi-qr-share",
+          "name": "WiFi QR 分享",
+          "nameEn": "WiFi QR Code Share",
+          "description": "將 WiFi 密碼轉為 QR Code，讓他人掃描即可連線",
+          "steps": [
+            "取得目前連線 WiFi SSID",
+            "取得 WiFi 密碼",
+            "生成 QR Code 圖片",
+            "顯示或儲存 QR Code"
+          ],
+          "automation": "手動觸發",
+          "difficulty": "簡單"
         }
       ]
     },
@@ -272,7 +430,13 @@
           "name": "通勤天气",
           "nameEn": "Commute Weather",
           "description": "出发地和目的地的天气预报+通勤建议",
-          "steps": ["获取当前位置天气", "获取目的地天气（如设置）", "计算温差", "生成出行建议文本", "显示通知"],
+          "steps": [
+            "获取当前位置天气",
+            "获取目的地天气（如设置）",
+            "计算温差",
+            "生成出行建议文本",
+            "显示通知"
+          ],
           "automation": "工作日早8点自动触发",
           "difficulty": "简单"
         },
@@ -281,7 +445,12 @@
           "name": "空气质量",
           "nameEn": "Air Quality Index",
           "description": "查看实时空气质量指数，给出外出建议",
-          "steps": ["获取 AQI 数据", "判断空气质量等级", "给出是否适合外出建议", "显示通知"],
+          "steps": [
+            "获取 AQI 数据",
+            "判断空气质量等级",
+            "给出是否适合外出建议",
+            "显示通知"
+          ],
           "automation": "每天早7点或手动触发",
           "difficulty": "简单"
         },
@@ -290,9 +459,41 @@
           "name": "出行预警",
           "nameEn": "Travel Alert",
           "description": "暴雨、台风、大雪等恶劣天气预警通知",
-          "steps": ["查询气象预警", "如有预警则发送推送通知", "给出避险建议"],
+          "steps": [
+            "查询气象预警",
+            "如有预警则发送推送通知",
+            "给出避险建议"
+          ],
           "automation": "每小时检查一次，有预警时立即通知",
           "difficulty": "中等"
+        },
+        {
+          "id": "flight-delay",
+          "name": "航班延誤監控",
+          "nameEn": "Flight Delay Monitor",
+          "description": "輸入航班號碼，即時查詢航班狀態並提供延誤建議",
+          "steps": [
+            "輸入航班號碼",
+            "查詢航班即時動態",
+            "判斷是否延誤或取消",
+            "若異常則推送通知並建議替代方案"
+          ],
+          "automation": "航班出發前 2 小時自動檢查",
+          "difficulty": "中等"
+        },
+        {
+          "id": "dest-weather",
+          "name": "目的地天氣",
+          "nameEn": "Destination Weather",
+          "description": "輸入目的地城市，查看當地未來七天天氣預報",
+          "steps": [
+            "輸入目的地城市",
+            "查詢該城市天氣預報",
+            "整理七日天氣摘要",
+            "顯示適合穿著建議"
+          ],
+          "automation": "出發前三天自動推送",
+          "difficulty": "簡單"
         }
       ]
     },
@@ -308,7 +509,11 @@
           "name": "语音备忘",
           "nameEn": "Voice Memo",
           "description": "一句话记录备忘，自动生成文本存入笔记应用",
-          "steps": ["录制语音", "转录为文字", "追加到备忘录或笔记App"],
+          "steps": [
+            "录制语音",
+            "转录为文字",
+            "追加到备忘录或笔记App"
+          ],
           "automation": "Siri「记一下：xxx」",
           "difficulty": "简单"
         },
@@ -317,7 +522,11 @@
           "name": "剪贴板历史",
           "nameEn": "Clipboard History",
           "description": "查看最近复制的历史记录，快速再次复制",
-          "steps": ["读取剪贴板历史文件", "列出最近10条记录", "点击任意一条复制回剪贴板"],
+          "steps": [
+            "读取剪贴板历史文件",
+            "列出最近10条记录",
+            "点击任意一条复制回剪贴板"
+          ],
           "automation": "手动触发",
           "difficulty": "中等"
         },
@@ -326,10 +535,17 @@
           "name": "快速回复模板",
           "nameEn": "Quick Reply Templates",
           "description": "常用回复模板一键发送，支持微信和短信",
-          "steps": ["选择回复模板（已/好的/收到/稍后联系）", "打开对应App聊天窗口", "粘贴并发送"],
+          "steps": [
+            "选择回复模板（已/好的/收到/稍后联系）",
+            "打开对应App聊天窗口",
+            "粘贴并发送"
+          ],
           "automation": "手动触发，可选择微信或短信",
           "difficulty": "简单",
-          "url_schemes": ["sms://", "weixin://"]
+          "url_schemes": [
+            "sms://",
+            "weixin://"
+          ]
         }
       ]
     },
@@ -345,7 +561,13 @@
           "name": "一键省电",
           "nameEn": "Power Saver",
           "description": "一键关闭不必要的后台活动和连接，延长续航",
-          "steps": ["关闭蓝牙", "降低屏幕亮度", "开启低电量模式", "暂停后台App刷新", "显示省电效果预估"],
+          "steps": [
+            "关闭蓝牙",
+            "降低屏幕亮度",
+            "开启低电量模式",
+            "暂停后台App刷新",
+            "显示省电效果预估"
+          ],
           "automation": "电量低于20%或手动触发",
           "difficulty": "简单"
         },
@@ -354,7 +576,12 @@
           "name": "后台管理",
           "nameEn": "Background Manager",
           "description": "查看哪些App在后台耗电，一键关闭",
-          "steps": ["读取后台活动数据", "列出高耗电App", "提示是否关闭后台刷新", "执行关闭操作"],
+          "steps": [
+            "读取后台活动数据",
+            "列出高耗电App",
+            "提示是否关闭后台刷新",
+            "执行关闭操作"
+          ],
           "automation": "手动触发",
           "difficulty": "中等"
         },
@@ -363,7 +590,12 @@
           "name": "低电量提醒",
           "nameEn": "Low Battery Alert",
           "description": "电量低于阈值时自动通知并建议省电操作",
-          "steps": ["检测当前电量", "低于20%发送通知", "低于10%发送紧急通知", "建议开启省电模式"],
+          "steps": [
+            "检测当前电量",
+            "低于20%发送通知",
+            "低于10%发送紧急通知",
+            "建议开启省电模式"
+          ],
           "automation": "每5分钟检查一次",
           "difficulty": "简单"
         }
@@ -381,7 +613,12 @@
           "name": "批量压缩照片",
           "nameEn": "Batch Compress Photos",
           "description": "将多张照片压缩后保存到指定相册，适合微信传输",
-          "steps": ["选择多张照片", "压缩到指定尺寸（如最大边1080px）", "质量设为80%", "保存到「压缩后」相册"],
+          "steps": [
+            "选择多张照片",
+            "压缩到指定尺寸（如最大边1080px）",
+            "质量设为80%",
+            "保存到「压缩后」相册"
+          ],
           "automation": "手动触发，从相册选择照片",
           "difficulty": "中等"
         },
@@ -390,7 +627,11 @@
           "name": "去除水印",
           "nameEn": "Remove Watermark",
           "description": "使用裁切或模糊方式去除图片角落水印",
-          "steps": ["选择照片", "裁剪掉水印区域或使用智能修复", "保存新图片到相册"],
+          "steps": [
+            "选择照片",
+            "裁剪掉水印区域或使用智能修复",
+            "保存新图片到相册"
+          ],
           "automation": "手动触发",
           "difficulty": "中等"
         },
@@ -399,7 +640,12 @@
           "name": "转黑白照片",
           "nameEn": "Convert to Black & White",
           "description": "一键将彩色照片转换为黑白艺术效果",
-          "steps": ["选择照片", "应用黑白滤镜", "增强对比度和细节", "保存新图片"],
+          "steps": [
+            "选择照片",
+            "应用黑白滤镜",
+            "增强对比度和细节",
+            "保存新图片"
+          ],
           "automation": "手动触发",
           "difficulty": "简单"
         }
@@ -417,17 +663,29 @@
           "name": "播放指定歌单",
           "nameEn": "Play Playlist",
           "description": "一键播放指定音乐App的歌单（网易云/QQ音乐）",
-          "steps": ["选择歌单名称", "打开音乐App", "搜索并播放指定歌单"],
+          "steps": [
+            "选择歌单名称",
+            "打开音乐App",
+            "搜索并播放指定歌单"
+          ],
           "automation": "手动触发，可预设多个常用歌单",
           "difficulty": "简单",
-          "url_schemes": ["neteasecloudmusic://", "qqmusic://"]
+          "url_schemes": [
+            "neteasecloudmusic://",
+            "qqmusic://"
+          ]
         },
         {
           "id": "podcast-subscribe",
           "name": "播客订阅管理",
           "nameEn": "Podcast Subscribe",
           "description": "一键订阅多个播客频道，或检查是否有新节目",
-          "steps": ["列出关注的播客", "检查每个播客最新一期", "汇总有新节目的列表", "发送通知"],
+          "steps": [
+            "列出关注的播客",
+            "检查每个播客最新一期",
+            "汇总有新节目的列表",
+            "发送通知"
+          ],
           "automation": "每天早8点自动检查",
           "difficulty": "中等"
         },
@@ -436,9 +694,41 @@
           "name": "睡前故事",
           "nameEn": "Bedtime Story",
           "description": "播放预存的睡前故事或白噪音，定时关闭",
-          "steps": ["选择故事/白噪音", "设置定时关闭（如30分钟）", "播放音频", "关闭后自动开启夜览"],
+          "steps": [
+            "选择故事/白噪音",
+            "设置定时关闭（如30分钟）",
+            "播放音频",
+            "关闭后自动开启夜览"
+          ],
           "automation": "22:30 自动触发或手动选择",
           "difficulty": "简单"
+        },
+        {
+          "id": "random-decision",
+          "name": "隨機決策",
+          "nameEn": "Random Decision",
+          "description": "陷入選擇困難？輸入選項，交給命運決定",
+          "steps": [
+            "輸入多個選項",
+            "隨機選擇其中一個",
+            "顯示選擇結果",
+            "播放慶祝特效"
+          ],
+          "automation": "手動觸發",
+          "difficulty": "簡單"
+        },
+        {
+          "id": "quote-generator",
+          "name": "每日名言",
+          "nameEn": "Daily Quote Generator",
+          "description": "每天隨機生成一句勵志名言，作為手機鎖屏或通知",
+          "steps": [
+            "從名言庫隨機選取一句",
+            "搭配背景圖片生成卡片",
+            "可分享至社群或設為桌面"
+          ],
+          "automation": "每天早7點自動推送",
+          "difficulty": "簡單"
         }
       ]
     },
@@ -454,7 +744,12 @@
           "name": "快速记账",
           "nameEn": "Quick Expense",
           "description": "语音或输入记录支出，自动分类并存入账单文件",
-          "steps": ["获取金额和用途", "选择分类（餐饮/交通/购物等）", "追加到expenses.json", "显示今日累计"],
+          "steps": [
+            "获取金额和用途",
+            "选择分类（餐饮/交通/购物等）",
+            "追加到expenses.json",
+            "显示今日累计"
+          ],
           "automation": "Siri「记一笔：花了35元吃午饭」",
           "difficulty": "简单"
         },
@@ -463,7 +758,13 @@
           "name": "月度账单",
           "nameEn": "Monthly Report",
           "description": "生成本月收支汇总报告，按分类统计",
-          "steps": ["读取本月所有记账记录", "按分类汇总", "计算总收入和总支出", "生成图表文本", "显示通知"],
+          "steps": [
+            "读取本月所有记账记录",
+            "按分类汇总",
+            "计算总收入和总支出",
+            "生成图表文本",
+            "显示通知"
+          ],
           "automation": "每月1号和15号自动运行",
           "difficulty": "中等"
         },
@@ -472,7 +773,11 @@
           "name": "账单提醒",
           "nameEn": "Bill Reminder",
           "description": "房租、信用卡、贷款等固定账单到期前提醒",
-          "steps": ["读取账单列表", "检查未来7天内的到期账单", "发送提醒通知（含金额和日期）"],
+          "steps": [
+            "读取账单列表",
+            "检查未来7天内的到期账单",
+            "发送提醒通知（含金额和日期）"
+          ],
           "automation": "每天早9点检查一次",
           "difficulty": "简单"
         }
@@ -490,7 +795,12 @@
           "name": "重复联系人合并",
           "nameEn": "Merge Duplicate Contacts",
           "description": "扫描并合并通讯录中重复的联系人条目",
-          "steps": ["读取通讯录", "查找相同姓名和号码的记录", "列出重复项供确认", "合并选定的重复联系人"],
+          "steps": [
+            "读取通讯录",
+            "查找相同姓名和号码的记录",
+            "列出重复项供确认",
+            "合并选定的重复联系人"
+          ],
           "automation": "手动触发，建议每月检查一次",
           "difficulty": "中等"
         },
@@ -499,7 +809,12 @@
           "name": "短信群发模板",
           "nameEn": "SMS Blast Template",
           "description": "用模板批量发送短信，支持节日祝福和通知",
-          "steps": ["选择模板（节日/通知/问候）", "选择联系人列表", "逐一发送短信", "发送完成后显示统计"],
+          "steps": [
+            "选择模板（节日/通知/问候）",
+            "选择联系人列表",
+            "逐一发送短信",
+            "发送完成后显示统计"
+          ],
           "automation": "手动触发",
           "difficulty": "简单",
           "warning": true
@@ -509,7 +824,12 @@
           "name": "生日提醒",
           "nameEn": "Birthday Alert",
           "description": "提前一天提醒即将到来的生日，并准备祝福文案",
-          "steps": ["读取通讯录生日字段", "筛选未来3天内过生日的联系人", "生成祝福文案", "发送通知提醒"],
+          "steps": [
+            "读取通讯录生日字段",
+            "筛选未来3天内过生日的联系人",
+            "生成祝福文案",
+            "发送通知提醒"
+          ],
           "automation": "每天早8点自动检查",
           "difficulty": "简单"
         }
@@ -527,7 +847,12 @@
           "name": "番茄钟",
           "nameEn": "Pomodoro Timer",
           "description": "25分钟专注 + 5分钟休息的番茄工作法计时器",
-          "steps": ["设置25分钟倒计时", "开始计时", "响铃提醒休息", "4个番茄后长休息15分钟"],
+          "steps": [
+            "设置25分钟倒计时",
+            "开始计时",
+            "响铃提醒休息",
+            "4个番茄后长休息15分钟"
+          ],
           "automation": "手动触发",
           "difficulty": "简单"
         },
@@ -536,7 +861,12 @@
           "name": "每日单词",
           "nameEn": "Daily Word",
           "description": "每天推送一个新单词，含释义和例句",
-          "steps": ["从词库中随机取一个单词", "获取音标、释义、例句", "用TTS朗读单词和例句", "保存到今日词库记录"],
+          "steps": [
+            "从词库中随机取一个单词",
+            "获取音标、释义、例句",
+            "用TTS朗读单词和例句",
+            "保存到今日词库记录"
+          ],
           "automation": "每天早7点自动推送",
           "difficulty": "中等"
         },
@@ -545,8 +875,42 @@
           "name": "学习专注模式",
           "nameEn": "Study Focus Mode",
           "description": "开启后屏蔽社交App通知，播放专注白噪音",
-          "steps": ["开启勿扰模式", "屏蔽社交类App通知", "播放白噪音/纯音乐", "显示学习计时器", "结束时发送学习报告"],
+          "steps": [
+            "开启勿扰模式",
+            "屏蔽社交类App通知",
+            "播放白噪音/纯音乐",
+            "显示学习计时器",
+            "结束时发送学习报告"
+          ],
           "automation": "手动触发，可随时退出",
+          "difficulty": "中等"
+        },
+        {
+          "id": "reading-tracker",
+          "name": "閱讀進度追蹤",
+          "nameEn": "Reading Progress Tracker",
+          "description": "記錄書籍閱讀進度，估算完成時間",
+          "steps": [
+            "輸入書名與總頁數",
+            "記錄已讀頁數",
+            "計算進度百分比",
+            "根據閱讀速度估算完成時間"
+          ],
+          "automation": "每次閱讀後手動更新",
+          "difficulty": "簡單"
+        },
+        {
+          "id": "vocab-flashcard",
+          "name": "單字閃卡",
+          "nameEn": "Vocabulary Flashcard",
+          "description": "每日隨機抽取單字進行自我測驗，強化記憶",
+          "steps": [
+            "從詞庫隨機選擇單字",
+            "顯示英文與音标",
+            "回答後顯示中文释义",
+            "標記已知/未知"
+          ],
+          "automation": "每天早8點自動推送新單字",
           "difficulty": "中等"
         }
       ]
@@ -563,7 +927,12 @@
           "name": "航班状态查询",
           "nameEn": "Flight Status Tracker",
           "description": "输入航班号查询实时状态（起降时间、延误信息）",
-          "steps": ["获取航班号输入", "查询航班实时数据", "显示起降时间和延误状态", "如有延误给出建议"],
+          "steps": [
+            "获取航班号输入",
+            "查询航班实时数据",
+            "显示起降时间和延误状态",
+            "如有延误给出建议"
+          ],
           "automation": "手动触发",
           "difficulty": "中等"
         },
@@ -572,7 +941,13 @@
           "name": "行程单生成",
           "nameEn": "Itinerary Generator",
           "description": "整合航班、酒店、景点信息生成完整行程单",
-          "steps": ["读取航班信息", "读取酒店预订信息", "读取景点预约信息", "生成 PDF 行程单", "保存到文件"],
+          "steps": [
+            "读取航班信息",
+            "读取酒店预订信息",
+            "读取景点预约信息",
+            "生成 PDF 行程单",
+            "保存到文件"
+          ],
           "automation": "出发前手动触发",
           "difficulty": "困难"
         },
@@ -581,7 +956,12 @@
           "name": "酒店入住提醒",
           "nameEn": "Hotel Check-in Reminder",
           "description": "出发前一天提醒酒店入住信息，含地址和电话",
-          "steps": ["读取酒店预订记录", "筛选明天入住的酒店", "发送包含地址和电话的通知", "提供一键导航选项"],
+          "steps": [
+            "读取酒店预订记录",
+            "筛选明天入住的酒店",
+            "发送包含地址和电话的通知",
+            "提供一键导航选项"
+          ],
           "automation": "入住前一天晚8点自动触发",
           "difficulty": "简单"
         }
@@ -599,7 +979,13 @@
           "name": "到家场景",
           "nameEn": "Home Arrive Scene",
           "description": "连接家中 WiFi 时自动开灯、开空调、播放音乐",
-          "steps": ["检测到家中 WiFi", "打开客厅灯", "开启空调到26度", "播放喜欢的音乐", "显示欢迎信息"],
+          "steps": [
+            "检测到家中 WiFi",
+            "打开客厅灯",
+            "开启空调到26度",
+            "播放喜欢的音乐",
+            "显示欢迎信息"
+          ],
           "automation": "连接家中 WiFi 时自动触发",
           "difficulty": "中等"
         },
@@ -608,7 +994,13 @@
           "name": "离家场景",
           "nameEn": "Home Leave Scene",
           "description": "断开家中 WiFi 时自动关所有灯和设备，布防",
-          "steps": ["检测到断开家中 WiFi", "关闭所有灯", "关闭空调和新风", "开启安防摄像头", "发送离家通知"],
+          "steps": [
+            "检测到断开家中 WiFi",
+            "关闭所有灯",
+            "关闭空调和新风",
+            "开启安防摄像头",
+            "发送离家通知"
+          ],
           "automation": "断开家中 WiFi 时自动触发",
           "difficulty": "中等"
         },
@@ -617,9 +1009,318 @@
           "name": "远程查看家",
           "nameEn": "Remote Home Check",
           "description": "一键查看家中摄像头画面和主要设备状态",
-          "steps": ["获取摄像头实时画面URL", "获取各设备开关状态", "组合显示通知卡片"],
+          "steps": [
+            "获取摄像头实时画面URL",
+            "获取各设备开关状态",
+            "组合显示通知卡片"
+          ],
           "automation": "手动触发",
           "difficulty": "简单"
+        }
+      ]
+    },
+    {
+      "id": "translate",
+      "name": "翻譯工具",
+      "icon": "🌐",
+      "color": "#FF2D55",
+      "description": "多國語言即時翻譯、拍照翻譯、單字查詢",
+      "shortcuts": [
+        {
+          "id": "photo-translate",
+          "name": "拍照翻譯",
+          "nameEn": "Photo Translate",
+          "description": "對準外文招牌或文件拍照，即時翻譯成中文",
+          "steps": [
+            "開啟相機拍攝外文文字",
+            "使用 OCR 辨識文字",
+            "調用翻譯 API",
+            "顯示中文翻譯結果"
+          ],
+          "automation": "手動觸發",
+          "difficulty": "中等"
+        },
+        {
+          "id": "text-translate",
+          "name": "文字翻譯",
+          "nameEn": "Text Translator",
+          "description": "輸入文字即時翻譯，支援多國語言互譯",
+          "steps": [
+            "輸入或貼上文字",
+            "選擇目標語言",
+            "呼叫翻譯 API",
+            "顯示翻譯結果"
+          ],
+          "automation": "手動觸發",
+          "difficulty": "簡單"
+        },
+        {
+          "id": "word-lookup",
+          "name": "單字查詢",
+          "nameEn": "Word Lookup",
+          "description": "選取文字中的單字，自動查詢定義與發音",
+          "steps": [
+            "取得選取文字",
+            "查詢字典 API",
+            "顯示釋義與音标",
+            "播放發音"
+          ],
+          "automation": "選取文字後手動觸發",
+          "difficulty": "簡單"
+        }
+      ]
+    },
+    {
+      "id": "daily-utils",
+      "name": "日常工具",
+      "icon": "🔧",
+      "color": "#FF9500",
+      "description": "小費計算、倒數計日、QR Code 生成等實用小工具",
+      "shortcuts": [
+        {
+          "id": "tip-calculator",
+          "name": "小費計算機",
+          "nameEn": "Tip Calculator",
+          "description": "輸入帳單金額與比例，快速計算小費與總額",
+          "steps": [
+            "輸入帳單金額",
+            "輸入小費百分比",
+            "計算小費金額與總額",
+            "顯示每人應付金額"
+          ],
+          "automation": "手動觸發",
+          "difficulty": "簡單"
+        },
+        {
+          "id": "days-until",
+          "name": "倒數計日",
+          "nameEn": "Days Until",
+          "description": "輸入目標日期，計算距離該日還有幾天",
+          "steps": [
+            "輸入目標日期",
+            "計算與今日天數差",
+            "顯示倒數天數",
+            "可設定提前提醒"
+          ],
+          "automation": "每天自動計算，關鍵日期前發送提醒",
+          "difficulty": "簡單"
+        },
+        {
+          "id": "qr-generator",
+          "name": "QR Code 生成",
+          "nameEn": "QR Code Generator",
+          "description": "將文字、網址或聯絡資訊轉換為 QR Code",
+          "steps": [
+            "輸入文字或網址",
+            "生成 QR Code 圖片",
+            "顯示或儲存圖片"
+          ],
+          "automation": "手動觸發",
+          "difficulty": "簡單"
+        }
+      ]
+    },
+    {
+      "id": "media-tools",
+      "name": "影音工具",
+      "icon": "🎬",
+      "color": "#AF52DE",
+      "description": "影片下載、歌詞顯示、音樂識別等娛樂功能",
+      "shortcuts": [
+        {
+          "id": "youtube-download",
+          "name": "YouTube 下載",
+          "nameEn": "YouTube Download",
+          "description": "複製 YouTube 連結後一鍵下載影片到相簿",
+          "steps": [
+            "取得 YouTube 影片連結",
+            "解析影片網址",
+            "下載影片到相簿",
+            "顯示下載完成通知"
+          ],
+          "automation": "手動觸發",
+          "difficulty": "中等"
+        },
+        {
+          "id": "lyrics-display",
+          "name": "歌詞顯示",
+          "nameEn": "Lyrics Display",
+          "description": "自動識別當前播放的歌曲並顯示同步歌詞",
+          "steps": [
+            "取得目前播放的歌曲名稱",
+            "查詢歌詞 API",
+            "顯示同步滾動歌詞"
+          ],
+          "automation": "歌曲開始播放時自動觸發",
+          "difficulty": "中等"
+        },
+        {
+          "id": "song-identify",
+          "name": "識別歌曲",
+          "nameEn": "Song Identify",
+          "description": "對著音樂哼唱或播放，自動辨識歌曲名稱與歌手",
+          "steps": [
+            "錄製幾秒音樂片段",
+            "送交音頻辨識 API",
+            "顯示歌曲名稱與歌手",
+            "可加入播放清單"
+          ],
+          "automation": "手動觸發",
+          "difficulty": "中等"
+        }
+      ]
+    },
+    {
+      "id": "travel-tools",
+      "name": "交通出行",
+      "icon": "🚗",
+      "color": "#007AFF",
+      "description": "即時公交查詢、叫車服務、停車位置記錄",
+      "shortcuts": [
+        {
+          "id": "bus-arrival",
+          "name": "公車到站查詢",
+          "nameEn": "Bus Arrival Query",
+          "description": "輸入公交站牌號碼，查詢即將到站的公車資訊",
+          "steps": [
+            "輸入公交站牌編號",
+            "查詢即時到站資訊",
+            "顯示即將到站班車與等待時間"
+          ],
+          "automation": "手動觸發",
+          "difficulty": "簡單"
+        },
+        {
+          "id": "taxi-call",
+          "name": "快速叫車",
+          "nameEn": "Quick Taxi",
+          "description": "一鍵開啟叫車 App 並填入常用地址",
+          "steps": [
+            "選擇叫車平台",
+            "填入預設目的地",
+            "開啟 App 並確認叫車"
+          ],
+          "automation": "手動觸發",
+          "difficulty": "簡單",
+          "url_schemes": [
+            "uber://",
+            "taxi://"
+          ]
+        },
+        {
+          "id": "parking-memory",
+          "name": "停車位置記憶",
+          "nameEn": "Parking Memory",
+          "description": "停車時自動記錄位置，離開時一鍵導航回去",
+          "steps": [
+            "偵測車輛停止移動",
+            "自動記錄 GPS 位置",
+            "在地圖上標記停車點",
+            "導航回停車位置"
+          ],
+          "automation": "車輛停止移動時自動觸發",
+          "difficulty": "中等"
+        }
+      ]
+    },
+    {
+      "id": "privacy-tools",
+      "name": "隱私安全",
+      "icon": "🛡️",
+      "color": "#34C759",
+      "description": "App 權限審視、定位關閉、隱私數據清理",
+      "shortcuts": [
+        {
+          "id": "permission-review",
+          "name": "App 權限審視",
+          "nameEn": "Permission Review",
+          "description": "列出所有 App 的權限狀態，找出過度索取權限的應用",
+          "steps": [
+            "讀取所有 App 權限設定",
+            "標示危險權限",
+            "生成權限報告",
+            "提示是否調整"
+          ],
+          "automation": "每月自動檢查一次",
+          "difficulty": "中等"
+        },
+        {
+          "id": "location-hide",
+          "name": "關閉定位追蹤",
+          "nameEn": "Location Tracking Off",
+          "description": "一鍵關閉非必要的 App 定位服務，保護隱私",
+          "steps": [
+            "列出擁有定位權限的 App",
+            "顯示使用頻率低的 App",
+            "關閉非必要 App 的定位權限"
+          ],
+          "automation": "手動觸發",
+          "difficulty": "簡單"
+        },
+        {
+          "id": "cache-cleanup",
+          "name": "快取清理",
+          "nameEn": "Cache Cleanup",
+          "description": "掃描並清理暫存檔案與快取，釋放儲存空間",
+          "steps": [
+            "掃描暫存檔案大小",
+            "分類顯示快取來源",
+            "選擇要清理的項目",
+            "執行清理"
+          ],
+          "automation": "每月自動執行一次",
+          "difficulty": "中等"
+        }
+      ]
+    },
+    {
+      "id": "home-automation",
+      "name": "家庭自動化",
+      "icon": "🏠",
+      "color": "#FF9500",
+      "description": "智能家居場景、日常例行任務自動化",
+      "shortcuts": [
+        {
+          "id": "good-night-scene",
+          "name": "晚安場景",
+          "nameEn": "Good Night Scene",
+          "description": "一句話關掉全屋燈光、鎖門、開啟安防系統",
+          "steps": [
+            "關閉所有燈光",
+            "鎖定門鎖",
+            "啟動安防系統",
+            "播放晚安語音"
+          ],
+          "automation": "22:30 或手動觸發",
+          "difficulty": "中等"
+        },
+        {
+          "id": "morning-scene",
+          "name": "晨間場景",
+          "nameEn": "Morning Scene",
+          "description": "起床自動開燈、播放新聞、開啟咖啡機",
+          "steps": [
+            "開啟室內燈光",
+            "播放当日新聞摘要",
+            "啟動咖啡機",
+            "顯示當日行程"
+          ],
+          "automation": "工作日早晨 7:00 自動觸發",
+          "difficulty": "中等"
+        },
+        {
+          "id": "away-mode",
+          "name": "外出模式",
+          "nameEn": "Away Mode",
+          "description": "出門時一鍵啟動，關閉所有設備並啟動安防",
+          "steps": [
+            "關閉所有燈光與電器",
+            "調低暖氣空調",
+            "啟動攝影機監視",
+            "確認門窗已鎖"
+          ],
+          "automation": "離開 Home WiFi 時自動觸發",
+          "difficulty": "簡單"
         }
       ]
     }
