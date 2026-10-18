@@ -1,0 +1,219 @@
+{
+  "meta": {
+    "title": "快捷指令大全",
+    "subtitle": "让 iPhone 更聪明的自动化生活",
+    "github": "https://github.com/jiyuan468-hash/ios-shortcuts-collection"
+  },
+  "categories": [
+    {
+      "id": "daily-life",
+      "name": "生活日常",
+      "icon": "🏠",
+      "color": "#FF9500",
+      "description": "早起、晚间、睡眠自动化，让生活更有仪式感",
+      "shortcuts": [
+        {
+          "id": "morning-greeting",
+          "name": "早上好",
+          "nameEn": "Morning Greeting",
+          "description": "一键播报今日天气、日出日落时间和日程安排",
+          "steps": ["获取当前天气", "获取今日日出日落", "获取今日日历", "朗读文本", "播放音乐"],
+          "automation": "每天 7:00 自动触发",
+          "difficulty": "简单"
+        },
+        {
+          "id": "evening-mode",
+          "name": "晚安模式",
+          "nameEn": "Evening Mode",
+          "description": "开启深色模式、播放白噪音、设置明日提醒",
+          "steps": ["设置屏幕亮度30%", "开启夜览模式", "播放白噪音", "开启勿扰模式", "显示晚安通知"],
+          "automation": "22:30 或连接家中 WiFi 自动触发",
+          "difficulty": "简单"
+        },
+        {
+          "id": "sleep-mode",
+          "name": "睡眠模式",
+          "nameEn": "Sleep Mode",
+          "description": "睡前准备与起床提醒的一体化流程",
+          "steps": ["开启勿扰模式", "开启夜览", "设置闹钟", "播放助眠音频"],
+          "automation": "23:00 或手动触发",
+          "difficulty": "简单"
+        }
+      ]
+    },
+    {
+      "id": "shopping",
+      "name": "购物电商",
+      "icon": "🛒",
+      "color": "#FF3B30",
+      "description": "一键签到、价格监控，解放你的双手",
+      "shortcuts": [
+        {
+          "id": "multi-sign",
+          "name": "一键签到",
+          "nameEn": "Multi-Platform Sign-in",
+          "description": "同时完成淘宝、天猫、京东、拼多多、饿了么签到",
+          "steps": ["打开淘宝签到", "打开天猫签到", "打开京东签到", "打开拼多多签到", "打开饿了么领豆"],
+          "automation": "每天 10:00 自动运行",
+          "difficulty": "中等"
+        },
+        {
+          "id": "price-monitor",
+          "name": "价格监控",
+          "nameEn": "Price Monitor",
+          "description": "输入商品链接和目标价，降价自动通知",
+          "steps": ["输入商品URL", "设置目标价格", "定时检查价格", "低于目标价发送通知"],
+          "automation": "每2小时检查一次",
+          "difficulty": "困难"
+        }
+      ]
+    },
+    {
+      "id": "productivity",
+      "name": "效率办公",
+      "icon": "📝",
+      "color": "#007AFF",
+      "description": "待办清单、会议纪要、文件整理，工作更高效",
+      "shortcuts": [
+        {
+          "id": "todo-view",
+          "name": "查看今日任务",
+          "nameEn": "View Today's Tasks",
+          "description": "在锁屏直接查看今日待办事项",
+          "steps": ["读取tasks.json", "过滤未完成任务", "组合文本", "显示通知"],
+          "automation": "可添加到锁屏快捷入口",
+          "difficulty": "简单"
+        },
+        {
+          "id": "todo-add",
+          "name": "添加任务",
+          "nameEn": "Add Task",
+          "description": "语音或文字快速添加新任务",
+          "steps": ["获取输入文本", "读取tasks.json", "追加新任务", "保存文件"],
+          "automation": "Siri「添加任务：xxx」",
+          "difficulty": "简单"
+        },
+        {
+          "id": "meeting-notes",
+          "name": "会议纪要",
+          "nameEn": "Meeting Notes",
+          "description": "录音转文字，AI 提取关键信息生成纪要",
+          "steps": ["开始录音", "录音结束", "转录文字", "AI提取要点", "保存备忘录"],
+          "automation": "会议结束时手动触发",
+          "difficulty": "困难"
+        }
+      ]
+    },
+    {
+      "id": "lockscreen",
+      "name": "锁屏相关",
+      "icon": "🔒",
+      "color": "#5856D6",
+      "description": "iOS 16+ 新功能深度利用，锁屏更实用",
+      "shortcuts": [
+        {
+          "id": "lockscreen-todo",
+          "name": "锁屏待办清单",
+          "nameEn": "Lock Screen Todo",
+          "description": "把最重要的事钉在 iPhone 锁屏上，iOS 17+ Live Activity",
+          "steps": ["查看今日任务", "显示在锁屏", "点击勾选完成", "全部完成自动关闭"],
+          "automation": "需要 iOS 17+ 和 Live Activity",
+          "difficulty": "困难",
+          "requires_ios17": true
+        },
+        {
+          "id": "lockscreen-widget",
+          "name": "锁屏 Widget 配置",
+          "nameEn": "Lock Screen Widget",
+          "description": "配置锁屏小组件，快速访问常用功能",
+          "steps": ["长按锁屏", "自定义样式", "添加快捷指令入口", "选择常用指令"],
+          "automation": "一次配置，长期使用",
+          "difficulty": "简单"
+        }
+      ]
+    },
+    {
+      "id": "health",
+      "name": "健康监测",
+      "icon": "❤️",
+      "color": "#FF2D55",
+      "description": "喝水提醒、运动打卡，保持健康习惯",
+      "shortcuts": [
+        {
+          "id": "water-intake",
+          "name": "喝杯水",
+          "nameEn": "Drink Water",
+          "description": "记录每次喝水，设置每小时提醒，累计达成目标",
+          "steps": ["读取water.json", "count+1", "记录时间", "保存文件", "显示进度通知"],
+          "automation": "每小时提醒一次",
+          "difficulty": "简单"
+        },
+        {
+          "id": "exercise-check",
+          "name": "运动打卡",
+          "nameEn": "Exercise Check-in",
+          "description": "记录运动数据，生成打卡图片分享",
+          "steps": ["记录开始时间", "同步 Health App 数据", "生成打卡图片", "保存到相册"],
+          "automation": "运动后手动触发",
+          "difficulty": "中等"
+        }
+      ]
+    },
+    {
+      "id": "content",
+      "name": "内容创作",
+      "icon": "📸",
+      "color": "#AF52DE",
+      "description": "截图拼接、照片处理，创作更高效",
+      "shortcuts": [
+        {
+          "id": "screenshot-stitch",
+          "name": "拼接截图",
+          "nameEn": "Screenshot Stitch",
+          "description": "多张截图自动垂直拼接成长图",
+          "steps": ["选取多张截图", "按时间排序", "计算总高度", "垂直拼接", "保存到相册"],
+          "automation": "手动触发，从相册选择截图",
+          "difficulty": "中等"
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "name": "安全隐私",
+      "icon": "🔐",
+      "color": "#34C759",
+      "description": "丢失模式、隐私保护，关键时刻能帮上大忙",
+      "shortcuts": [
+        {
+          "id": "lost-mode",
+          "name": "手机丢了",
+          "nameEn": "Lost Mode",
+          "description": "一键启动丢失模式，锁定设备并通知家人",
+          "steps": ["播放提示音", "设置锁定留言", "开启查找", "发送位置给家人", "拍摄周围环境"],
+          "automation": "Siri「我的手机丢了」",
+          "difficulty": "简单",
+          "warning": true
+        }
+      ]
+    },
+    {
+      "id": "social",
+      "name": "社交通讯",
+      "icon": "💬",
+      "color": "#30D158",
+      "description": "微信快捷操作，提升社交效率",
+      "shortcuts": [
+        {
+          "id": "wechat-open",
+          "name": "打开微信",
+          "nameEn": "Open WeChat",
+          "description": "快速打开微信指定页面（朋友圈/扫一扫/设置）",
+          "steps": ["打开微信"],
+          "automation": "手动触发",
+          "difficulty": "简单",
+          "url_schemes": ["weixin://", "weixin://dl/moments", "weixin://dl/settings"]
+        }
+      ]
+    }
+  ]
+}
