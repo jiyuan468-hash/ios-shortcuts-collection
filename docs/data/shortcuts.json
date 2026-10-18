@@ -214,6 +214,414 @@
           "url_schemes": ["weixin://", "weixin://dl/moments", "weixin://dl/settings"]
         }
       ]
+    },
+    {
+      "id": "system-tools",
+      "name": "系统工具",
+      "icon": "📱",
+      "color": "#636366",
+      "description": "电量查看、Wi-Fi开关、截屏上传等系统级快捷操作",
+      "shortcuts": [
+        {
+          "id": "battery-check",
+          "name": "查看电量",
+          "nameEn": "Battery Check",
+          "description": "显示各设备电量（iPhone、Apple Watch、 AirPods）",
+          "steps": ["获取 iPhone 电量", "获取 Apple Watch 电量", "获取 AirPods 电量", "组合文本显示通知"],
+          "automation": "每天早8点或连接充电器时",
+          "difficulty": "简单"
+        },
+        {
+          "id": "wifi-toggle",
+          "name": "Wi-Fi 开关",
+          "nameEn": "Wi-Fi Toggle",
+          "description": "快速切换 Wi-Fi 和移动数据，或自动判断联网状态",
+          "steps": ["判断当前网络类型", "如使用移动数据则提示", "打开设置 Wi-Fi 页或关闭"],
+          "automation": "手动触发或连接到特定地点时自动切换",
+          "difficulty": "简单"
+        },
+        {
+          "id": "screen-record",
+          "name": "开始录屏",
+          "nameEn": "Start Screen Recording",
+          "description": "一键开始屏幕录制，带麦克风音频",
+          "steps": ["等待3秒倒计时", "启动屏幕录制", "显示录制按钮悬浮窗"],
+          "automation": "手动触发，可通过锁屏或控制中心添加",
+          "difficulty": "简单"
+        },
+        {
+          "id": "screenshot-upload",
+          "name": "截屏后上传",
+          "nameEn": "Screenshot Upload",
+          "description": "自动截屏并上传到指定文件夹或笔记应用",
+          "steps": ["截屏", "等待1秒确保保存完成", "移动到指定文件夹", "可选：上传到云盘或粘贴到剪贴板"],
+          "automation": "手动触发，也可设置为截屏后自动运行",
+          "difficulty": "中等"
+        }
+      ]
+    },
+    {
+      "id": "weather-travel",
+      "name": "出行天气",
+      "icon": "🌤️",
+      "color": "#00C7BE",
+      "description": "通勤天气、空气质量、出行建议一站式掌握",
+      "shortcuts": [
+        {
+          "id": "commute-weather",
+          "name": "通勤天气",
+          "nameEn": "Commute Weather",
+          "description": "出发地和目的地的天气预报+通勤建议",
+          "steps": ["获取当前位置天气", "获取目的地天气（如设置）", "计算温差", "生成出行建议文本", "显示通知"],
+          "automation": "工作日早8点自动触发",
+          "difficulty": "简单"
+        },
+        {
+          "id": "air-quality",
+          "name": "空气质量",
+          "nameEn": "Air Quality Index",
+          "description": "查看实时空气质量指数，给出外出建议",
+          "steps": ["获取 AQI 数据", "判断空气质量等级", "给出是否适合外出建议", "显示通知"],
+          "automation": "每天早7点或手动触发",
+          "difficulty": "简单"
+        },
+        {
+          "id": "travel-alert",
+          "name": "出行预警",
+          "nameEn": "Travel Alert",
+          "description": "暴雨、台风、大雪等恶劣天气预警通知",
+          "steps": ["查询气象预警", "如有预警则发送推送通知", "给出避险建议"],
+          "automation": "每小时检查一次，有预警时立即通知",
+          "difficulty": "中等"
+        }
+      ]
+    },
+    {
+      "id": "notes-reminders",
+      "name": "备忘笔记",
+      "icon": "📋",
+      "color": "#FFD60A",
+      "description": "语音备忘、剪贴板管理、快速回复模板",
+      "shortcuts": [
+        {
+          "id": "voice-note",
+          "name": "语音备忘",
+          "nameEn": "Voice Memo",
+          "description": "一句话记录备忘，自动生成文本存入笔记应用",
+          "steps": ["录制语音", "转录为文字", "追加到备忘录或笔记App"],
+          "automation": "Siri「记一下：xxx」",
+          "difficulty": "简单"
+        },
+        {
+          "id": "clipboard-history",
+          "name": "剪贴板历史",
+          "nameEn": "Clipboard History",
+          "description": "查看最近复制的历史记录，快速再次复制",
+          "steps": ["读取剪贴板历史文件", "列出最近10条记录", "点击任意一条复制回剪贴板"],
+          "automation": "手动触发",
+          "difficulty": "中等"
+        },
+        {
+          "id": "quick-reply",
+          "name": "快速回复模板",
+          "nameEn": "Quick Reply Templates",
+          "description": "常用回复模板一键发送，支持微信和短信",
+          "steps": ["选择回复模板（已/好的/收到/稍后联系）", "打开对应App聊天窗口", "粘贴并发送"],
+          "automation": "手动触发，可选择微信或短信",
+          "difficulty": "简单",
+          "url_schemes": ["sms://", "weixin://"]
+        }
+      ]
+    },
+    {
+      "id": "battery-save",
+      "name": "省电模式",
+      "icon": "🔋",
+      "color": "#30D158",
+      "description": "一键省电、后台管理、低电量自动提醒",
+      "shortcuts": [
+        {
+          "id": "power-saver",
+          "name": "一键省电",
+          "nameEn": "Power Saver",
+          "description": "一键关闭不必要的后台活动和连接，延长续航",
+          "steps": ["关闭蓝牙", "降低屏幕亮度", "开启低电量模式", "暂停后台App刷新", "显示省电效果预估"],
+          "automation": "电量低于20%或手动触发",
+          "difficulty": "简单"
+        },
+        {
+          "id": "background-manager",
+          "name": "后台管理",
+          "nameEn": "Background Manager",
+          "description": "查看哪些App在后台耗电，一键关闭",
+          "steps": ["读取后台活动数据", "列出高耗电App", "提示是否关闭后台刷新", "执行关闭操作"],
+          "automation": "手动触发",
+          "difficulty": "中等"
+        },
+        {
+          "id": "low-battery-alert",
+          "name": "低电量提醒",
+          "nameEn": "Low Battery Alert",
+          "description": "电量低于阈值时自动通知并建议省电操作",
+          "steps": ["检测当前电量", "低于20%发送通知", "低于10%发送紧急通知", "建议开启省电模式"],
+          "automation": "每5分钟检查一次",
+          "difficulty": "简单"
+        }
+      ]
+    },
+    {
+      "id": "photo-edit",
+      "name": "照片处理",
+      "icon": "🖼️",
+      "color": "#FF375F",
+      "description": "批量压缩、去除水印、转黑白等常用图片处理",
+      "shortcuts": [
+        {
+          "id": "batch-compress",
+          "name": "批量压缩照片",
+          "nameEn": "Batch Compress Photos",
+          "description": "将多张照片压缩后保存到指定相册，适合微信传输",
+          "steps": ["选择多张照片", "压缩到指定尺寸（如最大边1080px）", "质量设为80%", "保存到「压缩后」相册"],
+          "automation": "手动触发，从相册选择照片",
+          "difficulty": "中等"
+        },
+        {
+          "id": "remove-watermark",
+          "name": "去除水印",
+          "nameEn": "Remove Watermark",
+          "description": "使用裁切或模糊方式去除图片角落水印",
+          "steps": ["选择照片", "裁剪掉水印区域或使用智能修复", "保存新图片到相册"],
+          "automation": "手动触发",
+          "difficulty": "中等"
+        },
+        {
+          "id": "convert-bw",
+          "name": "转黑白照片",
+          "nameEn": "Convert to Black & White",
+          "description": "一键将彩色照片转换为黑白艺术效果",
+          "steps": ["选择照片", "应用黑白滤镜", "增强对比度和细节", "保存新图片"],
+          "automation": "手动触发",
+          "difficulty": "简单"
+        }
+      ]
+    },
+    {
+      "id": "entertainment",
+      "name": "娱乐休闲",
+      "icon": "🎵",
+      "color": "#BF5AF2",
+      "description": "播放列表管理、播客订阅、睡前故事",
+      "shortcuts": [
+        {
+          "id": "music-playlist",
+          "name": "播放指定歌单",
+          "nameEn": "Play Playlist",
+          "description": "一键播放指定音乐App的歌单（网易云/QQ音乐）",
+          "steps": ["选择歌单名称", "打开音乐App", "搜索并播放指定歌单"],
+          "automation": "手动触发，可预设多个常用歌单",
+          "difficulty": "简单",
+          "url_schemes": ["neteasecloudmusic://", "qqmusic://"]
+        },
+        {
+          "id": "podcast-subscribe",
+          "name": "播客订阅管理",
+          "nameEn": "Podcast Subscribe",
+          "description": "一键订阅多个播客频道，或检查是否有新节目",
+          "steps": ["列出关注的播客", "检查每个播客最新一期", "汇总有新节目的列表", "发送通知"],
+          "automation": "每天早8点自动检查",
+          "difficulty": "中等"
+        },
+        {
+          "id": "bedtime-story",
+          "name": "睡前故事",
+          "nameEn": "Bedtime Story",
+          "description": "播放预存的睡前故事或白噪音，定时关闭",
+          "steps": ["选择故事/白噪音", "设置定时关闭（如30分钟）", "播放音频", "关闭后自动开启夜览"],
+          "automation": "22:30 自动触发或手动选择",
+          "difficulty": "简单"
+        }
+      ]
+    },
+    {
+      "id": "finance",
+      "name": "财务记账",
+      "icon": "🏦",
+      "color": "#AC8E68",
+      "description": "每日记账、月度统计、账单提醒",
+      "shortcuts": [
+        {
+          "id": "daily-expense",
+          "name": "快速记账",
+          "nameEn": "Quick Expense",
+          "description": "语音或输入记录支出，自动分类并存入账单文件",
+          "steps": ["获取金额和用途", "选择分类（餐饮/交通/购物等）", "追加到expenses.json", "显示今日累计"],
+          "automation": "Siri「记一笔：花了35元吃午饭」",
+          "difficulty": "简单"
+        },
+        {
+          "id": "monthly-report",
+          "name": "月度账单",
+          "nameEn": "Monthly Report",
+          "description": "生成本月收支汇总报告，按分类统计",
+          "steps": ["读取本月所有记账记录", "按分类汇总", "计算总收入和总支出", "生成图表文本", "显示通知"],
+          "automation": "每月1号和15号自动运行",
+          "difficulty": "中等"
+        },
+        {
+          "id": "bill-reminder",
+          "name": "账单提醒",
+          "nameEn": "Bill Reminder",
+          "description": "房租、信用卡、贷款等固定账单到期前提醒",
+          "steps": ["读取账单列表", "检查未来7天内的到期账单", "发送提醒通知（含金额和日期）"],
+          "automation": "每天早9点检查一次",
+          "difficulty": "简单"
+        }
+      ]
+    },
+    {
+      "id": "contacts",
+      "name": "通讯录",
+      "icon": "👥",
+      "color": "#64D2FF",
+      "description": "重复联系人合并、短信群发模板、生日提醒",
+      "shortcuts": [
+        {
+          "id": "merge-contacts",
+          "name": "重复联系人合并",
+          "nameEn": "Merge Duplicate Contacts",
+          "description": "扫描并合并通讯录中重复的联系人条目",
+          "steps": ["读取通讯录", "查找相同姓名和号码的记录", "列出重复项供确认", "合并选定的重复联系人"],
+          "automation": "手动触发，建议每月检查一次",
+          "difficulty": "中等"
+        },
+        {
+          "id": "sms-blast",
+          "name": "短信群发模板",
+          "nameEn": "SMS Blast Template",
+          "description": "用模板批量发送短信，支持节日祝福和通知",
+          "steps": ["选择模板（节日/通知/问候）", "选择联系人列表", "逐一发送短信", "发送完成后显示统计"],
+          "automation": "手动触发",
+          "difficulty": "简单",
+          "warning": true
+        },
+        {
+          "id": "birthday-alert",
+          "name": "生日提醒",
+          "nameEn": "Birthday Alert",
+          "description": "提前一天提醒即将到来的生日，并准备祝福文案",
+          "steps": ["读取通讯录生日字段", "筛选未来3天内过生日的联系人", "生成祝福文案", "发送通知提醒"],
+          "automation": "每天早8点自动检查",
+          "difficulty": "简单"
+        }
+      ]
+    },
+    {
+      "id": "study",
+      "name": "学习工具",
+      "icon": "📚",
+      "color": "#FF453A",
+      "description": "番茄钟、单词打卡、学习资料整理",
+      "shortcuts": [
+        {
+          "id": "pomodoro",
+          "name": "番茄钟",
+          "nameEn": "Pomodoro Timer",
+          "description": "25分钟专注 + 5分钟休息的番茄工作法计时器",
+          "steps": ["设置25分钟倒计时", "开始计时", "响铃提醒休息", "4个番茄后长休息15分钟"],
+          "automation": "手动触发",
+          "difficulty": "简单"
+        },
+        {
+          "id": "word-daily",
+          "name": "每日单词",
+          "nameEn": "Daily Word",
+          "description": "每天推送一个新单词，含释义和例句",
+          "steps": ["从词库中随机取一个单词", "获取音标、释义、例句", "用TTS朗读单词和例句", "保存到今日词库记录"],
+          "automation": "每天早7点自动推送",
+          "difficulty": "中等"
+        },
+        {
+          "id": "study-focus",
+          "name": "学习专注模式",
+          "nameEn": "Study Focus Mode",
+          "description": "开启后屏蔽社交App通知，播放专注白噪音",
+          "steps": ["开启勿扰模式", "屏蔽社交类App通知", "播放白噪音/纯音乐", "显示学习计时器", "结束时发送学习报告"],
+          "automation": "手动触发，可随时退出",
+          "difficulty": "中等"
+        }
+      ]
+    },
+    {
+      "id": "travel",
+      "name": "旅行出行",
+      "icon": "✈️",
+      "color": "#FF6B2B",
+      "description": "航班追踪、酒店预订、行程单生成",
+      "shortcuts": [
+        {
+          "id": "flight-tracker",
+          "name": "航班状态查询",
+          "nameEn": "Flight Status Tracker",
+          "description": "输入航班号查询实时状态（起降时间、延误信息）",
+          "steps": ["获取航班号输入", "查询航班实时数据", "显示起降时间和延误状态", "如有延误给出建议"],
+          "automation": "手动触发",
+          "difficulty": "中等"
+        },
+        {
+          "id": "itinerary-gen",
+          "name": "行程单生成",
+          "nameEn": "Itinerary Generator",
+          "description": "整合航班、酒店、景点信息生成完整行程单",
+          "steps": ["读取航班信息", "读取酒店预订信息", "读取景点预约信息", "生成 PDF 行程单", "保存到文件"],
+          "automation": "出发前手动触发",
+          "difficulty": "困难"
+        },
+        {
+          "id": "hotel-checkin",
+          "name": "酒店入住提醒",
+          "nameEn": "Hotel Check-in Reminder",
+          "description": "出发前一天提醒酒店入住信息，含地址和电话",
+          "steps": ["读取酒店预订记录", "筛选明天入住的酒店", "发送包含地址和电话的通知", "提供一键导航选项"],
+          "automation": "入住前一天晚8点自动触发",
+          "difficulty": "简单"
+        }
+      ]
+    },
+    {
+      "id": "smart-home",
+      "name": "智能家居",
+      "icon": "🏡",
+      "color": "#5856D6",
+      "description": "控制 HomeKit 设备、场景联动、远程查看",
+      "shortcuts": [
+        {
+          "id": "home-arrive",
+          "name": "到家场景",
+          "nameEn": "Home Arrive Scene",
+          "description": "连接家中 WiFi 时自动开灯、开空调、播放音乐",
+          "steps": ["检测到家中 WiFi", "打开客厅灯", "开启空调到26度", "播放喜欢的音乐", "显示欢迎信息"],
+          "automation": "连接家中 WiFi 时自动触发",
+          "difficulty": "中等"
+        },
+        {
+          "id": "home-leave",
+          "name": "离家场景",
+          "nameEn": "Home Leave Scene",
+          "description": "断开家中 WiFi 时自动关所有灯和设备，布防",
+          "steps": ["检测到断开家中 WiFi", "关闭所有灯", "关闭空调和新风", "开启安防摄像头", "发送离家通知"],
+          "automation": "断开家中 WiFi 时自动触发",
+          "difficulty": "中等"
+        },
+        {
+          "id": "remote-check",
+          "name": "远程查看家",
+          "nameEn": "Remote Home Check",
+          "description": "一键查看家中摄像头画面和主要设备状态",
+          "steps": ["获取摄像头实时画面URL", "获取各设备开关状态", "组合显示通知卡片"],
+          "automation": "手动触发",
+          "difficulty": "简单"
+        }
+      ]
     }
   ]
 }
