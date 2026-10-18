@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnail
+Thumbs.db
+
+# Shortcut exports
+*.shortcut
+*.shortcuts
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
