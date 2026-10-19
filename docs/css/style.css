@@ -273,3 +273,47 @@ img { max-width: 100%; display: block; }
 
 /* ===== Scrollbar ===== */
 ::-webkit-scrollbar { width: 0; }
+/* ===== Tutorial Steps ===== */
+.tutorial-steps {
+  list-style: none; counter-reset: step;
+}
+.tutorial-step {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 0;
+  border-bottom: 0.5px solid rgba(255,255,255,0.06);
+  counter-increment: step;
+}
+.tutorial-step:last-child { border-bottom: none; }
+.step-num {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--accent); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700; flex-shrink: 0;
+}
+.step-text {
+  flex: 1; font-size: 15px; line-height: 1.5; color: var(--text);
+}
+.copy-step-btn {
+  width: 32px; height: 32px; border-radius: 8px;
+  background: var(--surface2); display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; transition: background 0.2s;
+}
+.copy-step-btn:hover { background: var(--accent); }
+.copy-step-btn svg { width: 16px; height: 16px; fill: var(--text2); }
+.copy-step-btn:hover svg { fill: #fff; }
+
+.copy-all-btn {
+  width: 100%; height: 52px; border-radius: 14px;
+  background: var(--accent); color: #fff;
+  font-size: 17px; font-weight: 600;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  transition: opacity 0.2s, background 0.2s;
+  margin-top: 8px;
+}
+.copy-all-btn:active { opacity: 0.8; }
+.copy-all-btn svg { width: 20px; height: 20px; fill: #fff; }
+
+.steps-container {
+  background: var(--surface); border-radius: var(--radius);
+  padding: 16px; margin-bottom: 24px;
+}

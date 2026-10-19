@@ -222,14 +222,17 @@ function openShortcut(shortcutId, catId) {
     </div>
     ` : ''}
 
-        <button class="install-btn" id="dl-btn" onclick="downloadShortcut('${cat.id}', '${sc.id}')">
-      <svg viewBox="0 0 24 24"><path d="M5 4v2h14V4H5zm0 10h4v6h6v-6h4l-7-7-7 7z"/></svg>
-      下载 .shortcut 文件
+    <div class="steps-container" id="steps-container">
+      <div class="detail-section-title" style="margin-bottom:12px">创建步骤</div>
+      <ol class="tutorial-steps" id="tutorial-steps"></ol>
+    </div>
+    <button class="copy-all-btn" id="copy-all-btn" onclick="copyAllSteps()">
+      <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+      复制全部步骤
     </button>
-
     <p style="text-align:center;font-size:12px;color:var(--text2);margin-top:12px">
-      点击下载后将自动导入到快捷指令 App<br/>
-      如未跳转，可前往 <a href="https://github.com/jiyuan468-hash/ios-shortcuts-collection" target="_blank" style="color:var(--accent)">GitHub</a> 手动下载
+      复制后打开快捷指令 App &gt; 点击 + 新建快捷指令，粘贴步骤文本<br/>
+      每个步骤对应一个快捷指令操作，按顺序添加即可
     </p>
   `;
 
@@ -238,7 +241,54 @@ function openShortcut(shortcutId, catId) {
 
 
 // ===== Download Shortcut =====
+function copyAllSteps() {
+  const steps = document.querySelectorAll('#tutorial-steps li');
+  const text = Array.from(steps).map((li, i) => (i+1) + '. ' + li.textContent.trim()).join(String.fromCharCode(10));
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.getElementById('copy-all-btn');
+    btn.textContent = '✓ 已复制到剪贴板';
+    btn.style.background = '#30D158';
+    setTimeout(() => {
+      btn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg> 复制全部步骤';
+      btn.style.background = '';
+    }, 2000);
+  });
+}
+
+function renderTutorialSteps(steps, scName) {
+  const container = document.getElementById('tutorial-steps');
+  if (!container || !steps || steps.length === 0) {
+    if (container) container.innerHTML = '<li>请打开快捷指令 App 手动创建</li>';
+    return;
+  }
+  container.innerHTML = steps.map((step, i) => `
+    <li class="tutorial-step">
+      <span class="step-num">${i + 1}</span>
+      <span class="step-text">${step}</span>
+      <button class="copy-step-btn" onclick="copyStep(${i})" title="复制此步骤">
+        <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+      </button>
+    </li>
+  `).join('');
+}
+
+function copyStep(index) {
+  const steps = document.querySelectorAll('#tutorial-steps li .step-text');
+  if (steps[index]) {
+    navigator.clipboard.writeText(steps[index].textContent.trim()).then(() => {
+      const btn = steps[index].nextElementSibling;
+      if (btn) {
+        const orig = btn.innerHTML;
+        btn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>';
+        btn.style.color = '#30D158';
+        setTimeout(() => { btn.innerHTML = orig; btn.style.color = ''; }, 1500);
+      }
+    });
+  }
+}
+
 function downloadShortcut(catId, shortcutId) {
+  // This function is no longer used - replaced by renderTutorialSteps
   const catMap = {
     'daily-life': '日常生活', 'shopping': '购物省钱', 'productivity': '效率办公',
     'lockscreen': '锁屏组件', 'health': '医疗健康', 'content': '内容创作',
@@ -251,10 +301,15 @@ function downloadShortcut(catId, shortcutId) {
     'home-automation': '家庭自动化'
   };
   const catName = catMap[catId] || catId;
-  const url = 'https://raw.githubusercontent.com/jiyuan468-hash/ios-shortcuts-collection/main/shortcuts/'
-    + encodeURIComponent(catName) + '/' + encodeURIComponent(shortcutId) + '.shortcut';
-  // Open in new tab - Safari may offer to open with Shortcuts app
-  window.open(url, '_blank');
+  // Find the shortcut data
+  let sc = null;
+  let cat = null;
+  for (const c of shortcutsData.categories) {
+    const found = c.shortcuts.find(s => s.id === shortcutId);
+    if (found) { cat = c; sc = found; break; }
+  }
+  if (!sc) return;
+  renderTutorialSteps(sc.steps, sc.name);
 }
 
 // ===== Page Navigation =====
