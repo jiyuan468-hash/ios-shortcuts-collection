@@ -222,30 +222,20 @@ function openShortcut(shortcutId, catId) {
     </div>
     ` : ''}
 
-    <button class="install-btn" onclick="installShortcut('${cat.id}', '${sc.id}')">
-      <svg viewBox="0 0 24 24"><path d="M5 4v2h14V4H5zm0 10h4v6h6v-6h4l-7-7-7 7z"/></svg>
-      安装到快捷指令 App
+    <button class="install-btn" onclick="window.open('https://github.com/jiyuan468-hash/ios-shortcuts-collection', '_blank')">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+      前往 GitHub 查看完整教程
     </button>
 
     <p style="text-align:center;font-size:12px;color:var(--text2);margin-top:12px">
-      点击上方按钮将在快捷指令 App 中打开此指令<br/>
-      也可以前往 <a href="https://github.com/jiyuan468-hash/ios-shortcuts-collection" target="_blank" style="color:var(--accent)">GitHub</a> 下载 .shortcut 文件
+      当前页面展示的是快捷指令的设计规格与步骤说明<br/>
+      点击按钮前往 GitHub 查看详细实现教程，自行在快捷指令 App 中创建
     </p>
   `;
 
   showPage('shortcut-page');
 }
 
-// ===== Install =====
-function installShortcut(catId, shortcutId) {
-  const url = `shortcuts://run-shortcut?name=${encodeURIComponent(shortcutId)}`;
-  window.location.href = url;
-  setTimeout(() => {
-    if (document.visibilityState === 'visible') {
-      alert('如果快捷指令 App 未打开，请访问 GitHub 仓库下载 .shortcut 文件手动导入：\nhttps://github.com/jiyuan468-hash/ios-shortcuts-collection');
-    }
-  }, 2000);
-}
 
 // ===== Page Navigation =====
 function showPage(pageId) {
@@ -317,9 +307,9 @@ function renderSetupPage() {
       <div class="detail-section-title">如何安装快捷指令</div>
       <ol style="padding-left:20px;color:var(--text2);line-height:2">
         <li>在 Safari 中打开本页面，点击任意快捷指令</li>
-        <li>点击「安装到快捷指令 App」按钮</li>
-        <li>系统会跳转到快捷指令 App，点击「添加快捷指令」</li>
-        <li>返回桌面，在快捷指令 App 中找到它</li>
+        <li>查看页面上的步骤说明，理解每个操作的含义</li>
+        <li>点击「前往 GitHub」按钮查看详细教程</li>
+        <li>在快捷指令 App 中手动创建对应快捷指令</li>
       </ol>
     </div>
     <div class="detail-section">
