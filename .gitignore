@@ -6,9 +6,6 @@
 # Thumbnail
 Thumbs.db
 
-# Shortcut exports
-*.shortcut
-*.shortcuts
 
 # IDE
 .idea/
