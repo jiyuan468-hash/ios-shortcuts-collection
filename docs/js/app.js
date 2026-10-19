@@ -240,20 +240,21 @@ function openShortcut(shortcutId, catId) {
 // ===== Download Shortcut =====
 function downloadShortcut(catId, shortcutId) {
   const catMap = {
-    'daily-life': '生活日常', 'shopping': '购物电商', 'productivity': '效率办公',
-    'lockscreen': '锁屏相关', 'health': '健康监测', 'content': '内容创作',
+    'daily-life': '日常生活', 'shopping': '购物省钱', 'productivity': '效率办公',
+    'lockscreen': '锁屏组件', 'health': '医疗健康', 'content': '内容创作',
     'security': '安全隐私', 'social': '社交通讯', 'system-tools': '系统工具',
-    'weather-travel': '出行天气', 'notes-reminders': '备忘笔记', 'battery-save': '省电模式',
-    'photo-edit': '照片处理', 'entertainment': '娱乐休闲', 'finance': '财务记账',
-    'contacts': '通讯录', 'study': '学习工具', 'travel': '旅行出行',
-    'smart-home': '智能家居', 'translate': '翻译工具', 'daily-utils': '日常工具',
-    'media-tools': '影音工具', 'travel-tools': '交通出行', 'privacy-tools': '隐私安全',
+    'weather-travel': '出行天气', 'notes-reminders': '笔记提醒', 'battery-save': '省电模式',
+    'photo-edit': '图片处理', 'entertainment': '娱乐休闲', 'finance': '记账理财',
+    'contacts': '通讯录', 'study': '学习提升', 'travel': '差旅出行',
+    'smart-home': '智能家居', 'translate': '翻译工具', 'daily-utils': '日常小工具',
+    'media-tools': '媒体工具', 'travel-tools': '出行工具', 'privacy-tools': '隐私安全',
     'home-automation': '家庭自动化'
   };
   const catName = catMap[catId] || catId;
   const url = 'https://raw.githubusercontent.com/jiyuan468-hash/ios-shortcuts-collection/main/shortcuts/'
     + encodeURIComponent(catName) + '/' + encodeURIComponent(shortcutId) + '.shortcut';
-  window.location.href = 'shortcuts://import-shortcut/?url=' + encodeURIComponent(url) + '&name=' + encodeURIComponent(shortcutId);
+  // Direct link: Safari opens .shortcut file and prompts to import
+  window.location.href = url;
 }
 
 // ===== Page Navigation =====
