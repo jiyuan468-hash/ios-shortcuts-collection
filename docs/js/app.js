@@ -253,8 +253,8 @@ function downloadShortcut(catId, shortcutId) {
   const catName = catMap[catId] || catId;
   const url = 'https://raw.githubusercontent.com/jiyuan468-hash/ios-shortcuts-collection/main/shortcuts/'
     + encodeURIComponent(catName) + '/' + encodeURIComponent(shortcutId) + '.shortcut';
-  // Direct link: Safari opens .shortcut file and prompts to import
-  window.location.href = url;
+  // Open in new tab - Safari may offer to open with Shortcuts app
+  window.open(url, '_blank');
 }
 
 // ===== Page Navigation =====
